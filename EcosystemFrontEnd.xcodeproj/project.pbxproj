@@ -428,7 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EcosystemFrontEnd/EcosystemFrontEnd.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 597PF7552F;
@@ -451,14 +451,14 @@
 				CODE_SIGN_ENTITLEMENTS = EcosystemFrontEnd/EcosystemFrontEnd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XYK5RKG3PF;
+				DEVELOPMENT_TEAM = 597PF7552F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EcosystemFrontEnd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = clCoding.EcosystemFrontEnd;
+				PRODUCT_BUNDLE_IDENTIFIER = kelkamon.EcosystemFrontEnd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
