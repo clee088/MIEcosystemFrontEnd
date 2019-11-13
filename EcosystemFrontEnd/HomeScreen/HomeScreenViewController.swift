@@ -17,6 +17,7 @@ class HomeScreenViewController: NSViewController {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.image = #imageLiteral(resourceName: "Background")
 		view.imageAlignment = .alignCenter
+        view.imageScaling = .NSScaleToFit
 		return view
 	}()
 	
@@ -36,13 +37,17 @@ class HomeScreenViewController: NSViewController {
 	//MARK: - Functions
 	
 	private func configureUI() {
-		
+        if let bounds = NSScreen.main?.visibleFrame {
+            self.view.widthAnchor.constraint(lessThanOrEqualToConstant: bounds.width).isActive = true
+            self.view.heightAnchor.constraint(lessThanOrEqualToConstant: bounds.height).isActive = true
+            view.setFrameSize(bounds.size)
+        }
 		[backgroundImageView].forEach { view.addSubview($0) }
 
-		backgroundImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		backgroundImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-		backgroundImageView.heightAnchor.constraint(equalToConstant: NSScreen.main?.frame.height ?? 0).isActive = true
-		backgroundImageView.widthAnchor.constraint(equalToConstant: NSScreen.main?.frame.width ?? 0).isActive = true
+        backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        backgroundImageView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 		
 	}
 	
