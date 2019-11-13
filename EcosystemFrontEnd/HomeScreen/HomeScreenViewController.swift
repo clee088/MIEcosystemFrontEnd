@@ -16,7 +16,7 @@ class HomeScreenViewController: NSViewController {
 		let view = NSImageView()
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.image = #imageLiteral(resourceName: "Background")
-//		view.imageAlignment = .alignCenter
+		view.imageAlignment = .alignCenter
 		return view
 	}()
 	
