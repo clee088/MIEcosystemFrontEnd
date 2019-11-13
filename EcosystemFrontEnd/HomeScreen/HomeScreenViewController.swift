@@ -15,9 +15,9 @@ class HomeScreenViewController: NSViewController {
 	private let backgroundImageView: NSImageView = {
 		let view = NSImageView()
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.image = #imageLiteral(resourceName: "Background")
+		view.image = NSImage(named: "Background")
 		view.imageAlignment = .alignCenter
-        view.imageScaling = .NSScaleToFit
+//        view.imageScaling = .NSScaleToFit
 		return view
 	}()
 	
@@ -42,12 +42,13 @@ class HomeScreenViewController: NSViewController {
             self.view.heightAnchor.constraint(lessThanOrEqualToConstant: bounds.height).isActive = true
             view.setFrameSize(bounds.size)
         }
+		
 		[backgroundImageView].forEach { view.addSubview($0) }
 
-        backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        backgroundImageView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImageView.leftAnchor.constraint(lessThanOrEqualTo: view.leftAnchor).isActive = true
+        backgroundImageView.rightAnchor.constraint(lessThanOrEqualTo: view.rightAnchor).isActive = true
+        backgroundImageView.topAnchor.constraint(lessThanOrEqualTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor).isActive = true
 		
 	}
 	
