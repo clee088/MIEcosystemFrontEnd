@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3058E7AC237A25E000C10501 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058E7AA237A25E000C10501 /* HomeScreen.swift */; };
+		3058E7AC237A25E000C10501 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */; };
 		3058E7AD237A25E000C10501 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3058E7AB237A25E000C10501 /* HomeScreen.xib */; };
 		5079258E237A2260002B0918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079258D237A2260002B0918 /* AppDelegate.swift */; };
 		50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50792591237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3058E7AA237A25E000C10501 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		3058E7AB237A25E000C10501 /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
 		5079258A237A2260002B0918 /* EcosystemFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcosystemFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079258D237A2260002B0918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5028C819237B81F100D60E74 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */,
+				3058E7AB237A25E000C10501 /* HomeScreen.xib */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		50792581237A2260002B0918 = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5079258D237A2260002B0918 /* AppDelegate.swift */,
-				3058E7AA237A25E000C10501 /* HomeScreen.swift */,
-				3058E7AB237A25E000C10501 /* HomeScreen.xib */,
+				5028C819237B81F100D60E74 /* HomeScreen */,
 				50792594237A2262002B0918 /* Assets.xcassets */,
 				50792596237A2262002B0918 /* Main.storyboard */,
 				50792599237A2262002B0918 /* Info.plist */,
@@ -263,7 +271,7 @@
 			files = (
 				50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */,
 				5079258E237A2260002B0918 /* AppDelegate.swift in Sources */,
-				3058E7AC237A25E000C10501 /* HomeScreen.swift in Sources */,
+				3058E7AC237A25E000C10501 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,15 +439,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 597PF7552F;
+				DEVELOPMENT_TEAM = XYK5RKG3PF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EcosystemFrontEnd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kelkamon.EcosystemFrontEnd;
+				PRODUCT_BUNDLE_IDENTIFIER = clCoding.EcosystemFrontEnd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -451,14 +460,14 @@
 				CODE_SIGN_ENTITLEMENTS = EcosystemFrontEnd/EcosystemFrontEnd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 597PF7552F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EcosystemFrontEnd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kelkamon.EcosystemFrontEnd;
+				PRODUCT_BUNDLE_IDENTIFIER = clCoding.EcosystemFrontEnd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
