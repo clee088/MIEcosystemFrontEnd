@@ -2,7 +2,7 @@
 //  HomeScreen.swift
 //  EcosystemFrontEnd
 //
-//  Created by Noah Pikielny on 11/11/19.
+//  Created by Christopher Lee on 11/11/19.
 //  Copyright © 2019 Christopher Lee. All rights reserved.
 //
 
