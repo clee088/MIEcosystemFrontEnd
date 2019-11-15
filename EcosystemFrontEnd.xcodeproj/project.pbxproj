@@ -9,13 +9,26 @@
 /* Begin PBXBuildFile section */
 		3058E7AC237A25E000C10501 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */; };
 		3058E7AD237A25E000C10501 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3058E7AB237A25E000C10501 /* HomeScreen.xib */; };
-		307F1994237B91B400E35AE8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F1993237B91B400E35AE8 /* Helpers.swift */; };
+		307F1994237B91B400E35AE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F1993237B91B400E35AE8 /* Extensions.swift */; };
+		500A89BE237BACE400A7A7FA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BD237BACE400A7A7FA /* Fonts.swift */; };
+		500A89C0237BAD5700A7A7FA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BF237BAD5700A7A7FA /* Colors.swift */; };
+		500A89C8237D901D00A7A7FA /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 500A89C7237D901C00A7A7FA /* background.gif */; };
 		5079258E237A2260002B0918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079258D237A2260002B0918 /* AppDelegate.swift */; };
 		50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50792591237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld */; };
 		50792595237A2262002B0918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50792594237A2262002B0918 /* Assets.xcassets */; };
 		50792598237A2262002B0918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50792596237A2262002B0918 /* Main.storyboard */; };
 		507925A4237A2262002B0918 /* EcosystemFrontEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507925A3237A2262002B0918 /* EcosystemFrontEndTests.swift */; };
 		507925AF237A2262002B0918 /* EcosystemFrontEndUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507925AE237A2262002B0918 /* EcosystemFrontEndUITests.swift */; };
+		50EF36DC237E045400DA497E /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D2237E045400DA497E /* SourceSansPro-Italic.ttf */; };
+		50EF36DD237E045400DA497E /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D3237E045400DA497E /* SourceSansPro-ExtraLight.ttf */; };
+		50EF36DE237E045400DA497E /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D4237E045400DA497E /* SourceSansPro-ExtraLightItalic.ttf */; };
+		50EF36DF237E045400DA497E /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D5237E045400DA497E /* SourceSansPro-BoldItalic.ttf */; };
+		50EF36E0237E045400DA497E /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D6237E045400DA497E /* SourceSansPro-Light.ttf */; };
+		50EF36E1237E045400DA497E /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D7237E045400DA497E /* SourceSansPro-LightItalic.ttf */; };
+		50EF36E2237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D8237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf */; };
+		50EF36E3237E045400DA497E /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36D9237E045400DA497E /* SourceSansPro-Bold.ttf */; };
+		50EF36E4237E045400DA497E /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36DA237E045400DA497E /* SourceSansPro-SemiBold.ttf */; };
+		50EF36E5237E045400DA497E /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF36DB237E045400DA497E /* SourceSansPro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +51,10 @@
 /* Begin PBXFileReference section */
 		3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		3058E7AB237A25E000C10501 /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
-		307F1993237B91B400E35AE8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		307F1993237B91B400E35AE8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		500A89BD237BACE400A7A7FA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		500A89BF237BAD5700A7A7FA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		500A89C7237D901C00A7A7FA /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
 		5079258A237A2260002B0918 /* EcosystemFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcosystemFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079258D237A2260002B0918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50792592237A2260002B0918 /* EcosystemFrontEnd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcosystemFrontEnd.xcdatamodel; sourceTree = "<group>"; };
@@ -52,6 +68,16 @@
 		507925AA237A2262002B0918 /* EcosystemFrontEndUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcosystemFrontEndUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		507925AE237A2262002B0918 /* EcosystemFrontEndUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcosystemFrontEndUITests.swift; sourceTree = "<group>"; };
 		507925B0237A2262002B0918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50EF36D2237E045400DA497E /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		50EF36D3237E045400DA497E /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		50EF36D4237E045400DA497E /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		50EF36D5237E045400DA497E /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		50EF36D6237E045400DA497E /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		50EF36D7237E045400DA497E /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		50EF36D8237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		50EF36D9237E045400DA497E /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		50EF36DA237E045400DA497E /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		50EF36DB237E045400DA497E /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +110,7 @@
 			children = (
 				3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */,
 				3058E7AB237A25E000C10501 /* HomeScreen.xib */,
+				500A89C7237D901C00A7A7FA /* background.gif */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -113,8 +140,8 @@
 			children = (
 				5079258D237A2260002B0918 /* AppDelegate.swift */,
 				5028C819237B81F100D60E74 /* HomeScreen */,
+				50D5B3AB237BAC3100E1E572 /* Utilities */,
 				50792594237A2262002B0918 /* Assets.xcassets */,
-				307F1993237B91B400E35AE8 /* Helpers.swift */,
 				50792596237A2262002B0918 /* Main.storyboard */,
 				50792599237A2262002B0918 /* Info.plist */,
 				5079259A237A2262002B0918 /* EcosystemFrontEnd.entitlements */,
@@ -139,6 +166,42 @@
 				507925B0237A2262002B0918 /* Info.plist */,
 			);
 			path = EcosystemFrontEndUITests;
+			sourceTree = "<group>";
+		};
+		50D5B3AB237BAC3100E1E572 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50EF36E9237E094200DA497E /* Extensions */,
+				50D5B3AC237BAC4700E1E572 /* Fonts */,
+				500A89BD237BACE400A7A7FA /* Fonts.swift */,
+				500A89BF237BAD5700A7A7FA /* Colors.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		50D5B3AC237BAC4700E1E572 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				50EF36D9237E045400DA497E /* SourceSansPro-Bold.ttf */,
+				50EF36D5237E045400DA497E /* SourceSansPro-BoldItalic.ttf */,
+				50EF36D3237E045400DA497E /* SourceSansPro-ExtraLight.ttf */,
+				50EF36D4237E045400DA497E /* SourceSansPro-ExtraLightItalic.ttf */,
+				50EF36D2237E045400DA497E /* SourceSansPro-Italic.ttf */,
+				50EF36D6237E045400DA497E /* SourceSansPro-Light.ttf */,
+				50EF36D7237E045400DA497E /* SourceSansPro-LightItalic.ttf */,
+				50EF36DB237E045400DA497E /* SourceSansPro-Regular.ttf */,
+				50EF36DA237E045400DA497E /* SourceSansPro-SemiBold.ttf */,
+				50EF36D8237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		50EF36E9237E094200DA497E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				307F1993237B91B400E35AE8 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +308,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EF36DD237E045400DA497E /* SourceSansPro-ExtraLight.ttf in Resources */,
+				50EF36DF237E045400DA497E /* SourceSansPro-BoldItalic.ttf in Resources */,
+				50EF36E0237E045400DA497E /* SourceSansPro-Light.ttf in Resources */,
+				500A89C8237D901D00A7A7FA /* background.gif in Resources */,
+				50EF36E2237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				50EF36E3237E045400DA497E /* SourceSansPro-Bold.ttf in Resources */,
 				3058E7AD237A25E000C10501 /* HomeScreen.xib in Resources */,
 				50792595237A2262002B0918 /* Assets.xcassets in Resources */,
+				50EF36DC237E045400DA497E /* SourceSansPro-Italic.ttf in Resources */,
+				50EF36E5237E045400DA497E /* SourceSansPro-Regular.ttf in Resources */,
 				50792598237A2262002B0918 /* Main.storyboard in Resources */,
+				50EF36E4237E045400DA497E /* SourceSansPro-SemiBold.ttf in Resources */,
+				50EF36DE237E045400DA497E /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				50EF36E1237E045400DA497E /* SourceSansPro-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */,
+				500A89C0237BAD5700A7A7FA /* Colors.swift in Sources */,
+				500A89BE237BACE400A7A7FA /* Fonts.swift in Sources */,
 				5079258E237A2260002B0918 /* AppDelegate.swift in Sources */,
 				3058E7AC237A25E000C10501 /* HomeScreenViewController.swift in Sources */,
-				307F1994237B91B400E35AE8 /* Helpers.swift in Sources */,
+				307F1994237B91B400E35AE8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +519,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 597PF7552F;
+				DEVELOPMENT_TEAM = XYK5RKG3PF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EcosystemFrontEnd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
