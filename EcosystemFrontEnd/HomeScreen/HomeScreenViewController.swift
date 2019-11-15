@@ -21,7 +21,7 @@ class HomeScreenViewController: NSViewController {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.controlsStyle = .none
 		view.updatesNowPlayingInfoCenter = false
-		view.player = AVPlayer(url: Bundle.main.url(forResource: "Background", withExtension: ".mov")!)
+		view.player = AVPlayer(url: Bundle.main.url(forResource: "Trimmed", withExtension: ".mov")!)
 		view.layer?.addSublayer(layer)
 		return view
 	}()

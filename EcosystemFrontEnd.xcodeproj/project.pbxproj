@@ -12,6 +12,7 @@
 		307F1994237B91B400E35AE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F1993237B91B400E35AE8 /* Extensions.swift */; };
 		500A89BE237BACE400A7A7FA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BD237BACE400A7A7FA /* Fonts.swift */; };
 		500A89C0237BAD5700A7A7FA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BF237BAD5700A7A7FA /* Colors.swift */; };
+		503E3444237F1B5C009939F4 /* Trimmed.mov in Resources */ = {isa = PBXBuildFile; fileRef = 503E3443237F1B5C009939F4 /* Trimmed.mov */; };
 		5079258E237A2260002B0918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079258D237A2260002B0918 /* AppDelegate.swift */; };
 		50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50792591237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld */; };
 		50792595237A2262002B0918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50792594237A2262002B0918 /* Assets.xcassets */; };
@@ -53,7 +54,7 @@
 		307F1993237B91B400E35AE8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		500A89BD237BACE400A7A7FA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		500A89BF237BAD5700A7A7FA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		503E3442237F1AD8009939F4 /* Background.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Background.mov; path = "/Users/christopherlee/Desktop/School/March Intensive/EcosystemFrontEnd/EcosystemFrontEnd/HomeScreen/Background.mov"; sourceTree = "<absolute>"; };
+		503E3443237F1B5C009939F4 /* Trimmed.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Trimmed.mov; sourceTree = "<group>"; };
 		5079258A237A2260002B0918 /* EcosystemFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcosystemFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079258D237A2260002B0918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50792592237A2260002B0918 /* EcosystemFrontEnd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcosystemFrontEnd.xcdatamodel; sourceTree = "<group>"; };
@@ -108,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */,
-				503E3442237F1AD8009939F4 /* Background.mov */,
+				503E3443237F1B5C009939F4 /* Trimmed.mov */,
 				3058E7AB237A25E000C10501 /* HomeScreen.xib */,
 			);
 			path = HomeScreen;
@@ -308,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EF36DD237E045400DA497E /* SourceSansPro-ExtraLight.ttf in Resources */,
+				503E3444237F1B5C009939F4 /* Trimmed.mov in Resources */,
 				50EF36DF237E045400DA497E /* SourceSansPro-BoldItalic.ttf in Resources */,
 				50EF36E0237E045400DA497E /* SourceSansPro-Light.ttf in Resources */,
 				50EF36E2237E045400DA497E /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
