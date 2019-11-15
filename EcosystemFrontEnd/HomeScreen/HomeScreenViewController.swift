@@ -7,18 +7,22 @@
 //
 
 import Cocoa
+import AVFoundation
+import AVKit
 
 class HomeScreenViewController: NSViewController {
 
 	//MARK: - Properties
 	
-	private let backgroundImageView: NSImageView = {
-		let view = NSImageView()
+	private let backgroundMoviePlayerView: AVPlayerView = {
+		let view = AVPlayerView()
+		let layer = AVPlayerLayer(player: view.player)
+		layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.image = NSImage(byReferencing: Bundle.main.url(forResource: "background", withExtension: ".gif")!)
-		view.imageAlignment = .alignCenter
-        view.imageScaling = .scaleAxesIndependently
-		view.animates = true
+		view.controlsStyle = .none
+		view.updatesNowPlayingInfoCenter = false
+		view.player = AVPlayer(url: Bundle.main.url(forResource: "Background", withExtension: ".mov")!)
+		view.layer?.addSublayer(layer)
 		return view
 	}()
 	
@@ -30,6 +34,7 @@ class HomeScreenViewController: NSViewController {
 		view.font = NSFont(name: Fonts.sourceSansPro, size: 50)
 		view.backgroundColor = .clear
 		view.isEditable = false
+		view.isSelectable = false
 		view.alignment = .center
 		view.wantsLayer = true
 		view.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
@@ -140,7 +145,7 @@ class HomeScreenViewController: NSViewController {
 		
     }
 	
-	//MARK: - Functions
+	//MARK: - Constraints
 	
 	private func configureUI() {
 		
@@ -151,25 +156,27 @@ class HomeScreenViewController: NSViewController {
             self.view.heightAnchor.constraint(lessThanOrEqualToConstant: bounds.height).isActive = true
             view.setFrameSize(bounds.size)
 			
-			backgroundImageView.widthAnchor.constraint(equalToConstant: bounds.width).isActive = true
-			backgroundImageView.heightAnchor.constraint(equalToConstant: bounds.height).isActive = true
+			backgroundMoviePlayerView.widthAnchor.constraint(equalToConstant: bounds.width).isActive = true
+			backgroundMoviePlayerView.heightAnchor.constraint(equalToConstant: bounds.height).isActive = true
+
         }
 		
-		[backgroundImageView, titleTextView, startButton, loadButton, settingsButton, creditsButton].forEach { view.addSubview($0) }
-		
-//		buttonsCollection.delegate = self
-//		buttonsCollection.dataSource = self
-//		buttonsCollection.register(ButtonCell.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("item"))
+		[backgroundMoviePlayerView, titleTextView, startButton, loadButton, settingsButton, creditsButton].forEach { view.addSubview($0) }
 
+		backgroundMoviePlayerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+		
+		backgroundMoviePlayerView.layer?.frame = self.backgroundMoviePlayerView.frame
+		backgroundMoviePlayerView.player?.play()
+		backgroundMoviePlayerView.player?.actionAtItemEnd = .none
+		NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.backgroundMoviePlayerView.player?.currentItem, queue: .main) { [weak self] _ in
+			self?.backgroundMoviePlayerView.player?.seek(to: .zero)
+			self?.backgroundMoviePlayerView.player?.play()
+		}
+		
 		titleTextView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 		titleTextView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50).isActive = true
 		titleTextView.widthAnchor.constraint(equalToConstant: 500).isActive = true
 		titleTextView.heightAnchor.constraint(equalToConstant: 75).isActive = true
-		
-//		buttonsCollection.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//		buttonsCollection.topAnchor.constraint(equalTo: titleTextView.bottomAnchor, constant: 100).isActive = true
-//		buttonsCollection.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100).isActive = true
-//		buttonsCollection.widthAnchor.constraint(equalToConstant: 300).isActive = true
 		
 		startButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 		startButton.topAnchor.constraint(equalTo: titleTextView.bottomAnchor, constant: 50).isActive = true
@@ -190,8 +197,23 @@ class HomeScreenViewController: NSViewController {
 		creditsButton.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 50).isActive = true
 		creditsButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
 		creditsButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//
+
 	}
+	
+	//MARK: - Functions
+	
+//	private func createImageArray(total: Int, imagePrefix: String) -> [NSImage] {
+//
+//		var imageArray: [NSImage] = []
+//
+//		for imageCount in 0..<total {
+//			let imageName: String = "\(imagePrefix)-\(imageCount).png"
+//			let image = NSImage(named: imageName)!
+//
+//			imageArray.append(image)
+//		}
+//		return imageArray
+//	}
 	
 	@objc private func startSimulation() {
 		

@@ -2,34 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SourceSansPro-Bold.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-BoldItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-ExtraLight.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-ExtraLightItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-Italic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-Light.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-LightItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-Regular.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-SemiBold.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:SourceSansPro-SemiBoldItalic.ttf">
+      location = "group:/Users/christopherlee/Desktop/School/March Intensive/EcosystemFrontEnd/EcosystemFrontEnd/HomeScreen/Trimmed.mov">
    </FileRef>
    <FileRef
       location = "self:">
