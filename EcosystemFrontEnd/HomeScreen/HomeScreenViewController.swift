@@ -43,96 +43,104 @@ class HomeScreenViewController: NSViewController {
 		return view
 	}()
 	
-//	let buttonsCollectionText: [String] = ["Start", "Load", "Settings", "Credits"]
-//
-//	let buttonsCollection: NSCollectionView = {
-//		let layout = NSCollectionViewFlowLayout()
-//		let collection = NSCollectionView(frame: NSRect(x: 0, y: 0, width: 0, height: 0))
-//		collection.translatesAutoresizingMaskIntoConstraints = false
-//		collection.collectionViewLayout = layout
-//		collection.wantsLayer = true
-//		collection.backgroundColors = [.clear]
-//		collection.isSelectable = true
-//		return collection
-//	}()
-	
-	private let startButton: NSButton = {
-		let button = NSButton()
+	private let startButton: HomeScreenButton = {
+		let button = HomeScreenButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.action = #selector(buttonClicked)
 		let attributes: [NSAttributedString.Key: Any] = [
 			.font: NSFont(name: Fonts.sourceSansProLight, size: 30)!,
 			.foregroundColor: Colors.textColor
 		]
 		button.attributedTitle = NSAttributedString(string: "Start", attributes: attributes)
-		button.state = .off
-		button.isBordered = false
-		button.action = #selector(startSimulation)
-		button.wantsLayer = true
-		button.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.50).cgColor
-		button.layer?.masksToBounds = false
-		button.layer?.cornerRadius = 25
-		button.bezelStyle = .smallSquare
+		
 		return button
 	}()
 	
-	private let loadButton: NSButton = {
-		let button = NSButton()
+	private let loadButton: HomeScreenButton = {
+		let button = HomeScreenButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.action = #selector(buttonClicked)
 		let attributes: [NSAttributedString.Key: Any] = [
 			.font: NSFont(name: Fonts.sourceSansProLight, size: 30)!,
 			.foregroundColor: Colors.textColor
 		]
 		button.attributedTitle = NSAttributedString(string: "Load", attributes: attributes)
-		button.state = .off
-		button.isBordered = false
-		button.action = #selector(startSimulation)
-		button.wantsLayer = true
-		button.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.50).cgColor
-		button.layer?.masksToBounds = false
-		button.layer?.cornerRadius = 25
-		button.bezelStyle = .smallSquare
+		
 		return button
 	}()
 	
-	private let settingsButton: NSButton = {
-		let button = NSButton()
+	private let settingsButton: HomeScreenButton = {
+		let button = HomeScreenButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.action = #selector(buttonClicked)
 		let attributes: [NSAttributedString.Key: Any] = [
 			.font: NSFont(name: Fonts.sourceSansProLight, size: 30)!,
 			.foregroundColor: Colors.textColor
 		]
 		button.attributedTitle = NSAttributedString(string: "Settings", attributes: attributes)
-		button.state = .off
-		button.isBordered = false
-		button.action = #selector(startSimulation)
-		button.wantsLayer = true
-		button.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.50).cgColor
-		button.layer?.masksToBounds = false
-		button.layer?.cornerRadius = 25
-		button.bezelStyle = .smallSquare
+		
 		return button
 	}()
 	
-	private let creditsButton: NSButton = {
-		let button = NSButton()
+	private let creditsButton: HomeScreenButton = {
+		let button = HomeScreenButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.action = #selector(buttonClicked)
 		let attributes: [NSAttributedString.Key: Any] = [
 			.font: NSFont(name: Fonts.sourceSansProLight, size: 30)!,
 			.foregroundColor: Colors.textColor
 		]
 		button.attributedTitle = NSAttributedString(string: "Credits", attributes: attributes)
-		button.state = .off
-		button.isBordered = false
-		button.action = #selector(startSimulation)
-		button.wantsLayer = true
-		button.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.50).cgColor
-		button.layer?.masksToBounds = false
-		button.layer?.cornerRadius = 25
-		button.bezelStyle = .smallSquare
+		
 		return button
 	}()
 	
 	//MARK: - Inits
+	
+	override func mouseEntered(with event: NSEvent) {
+		
+		if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
+			switch (buttonName) {
+			case "Start":
+				startButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75).cgColor
+				
+			case "Load":
+				loadButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75).cgColor
+				
+			case "Settings":
+				settingsButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75).cgColor
+				
+			case "Credits":
+				creditsButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75).cgColor
+
+			default:
+				print("Unknown")
+			}
+		}
+		
+	}
+
+	override func mouseExited(with event: NSEvent) {
+		if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
+			switch (buttonName) {
+			case "Start":
+				startButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
+				
+			case "Load":
+				loadButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
+				
+			case "Settings":
+				settingsButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
+				
+			case "Credits":
+				creditsButton.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.5).cgColor
+				
+
+			default:
+				print("Unknown")
+			}
+		}
+	}
 	
     convenience init() {
         self.init(nibName: "HomeScreen", bundle: nil)
@@ -142,7 +150,7 @@ class HomeScreenViewController: NSViewController {
         super.viewDidLoad()
 		
 		configureUI()
-		
+
     }
 	
 	//MARK: - Constraints
@@ -197,27 +205,37 @@ class HomeScreenViewController: NSViewController {
 		creditsButton.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 50).isActive = true
 		creditsButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
 		creditsButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
+		
+		DispatchQueue.main.async {
+			self.view.addTrackingArea(NSTrackingArea(rect: self.startButton.frame, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: ["start": "Start"]))
+			self.view.addTrackingArea(NSTrackingArea(rect: self.loadButton.frame, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: ["load": "Load"]))
+			self.view.addTrackingArea(NSTrackingArea(rect: self.settingsButton.frame, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: ["settings": "Settings"]))
+			self.view.addTrackingArea(NSTrackingArea(rect: self.creditsButton.frame, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: ["credits": "Credits"]))
+		}
+		
 	}
 	
 	//MARK: - Functions
 	
-//	private func createImageArray(total: Int, imagePrefix: String) -> [NSImage] {
-//
-//		var imageArray: [NSImage] = []
-//
-//		for imageCount in 0..<total {
-//			let imageName: String = "\(imagePrefix)-\(imageCount).png"
-//			let image = NSImage(named: imageName)!
-//
-//			imageArray.append(image)
-//		}
-//		return imageArray
-//	}
-	
-	@objc private func startSimulation() {
+	@objc private func buttonClicked(button: NSButton) {
+		print("Starting... \(button.title)")
 		
-		print("Starting...")
+		if button.title == "Start" {
+			print("Start")
+		}
+		
+		if button.title == "Load" {
+			print("Load")
+		}
+		
+		if button.title == "Settings" {
+			print("Settings")
+		}
+
+		if button.title == "Credits" {
+			print("Credits")
+		}
+
 		
 	}
 	

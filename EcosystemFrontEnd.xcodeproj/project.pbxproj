@@ -13,6 +13,7 @@
 		500A89BE237BACE400A7A7FA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BD237BACE400A7A7FA /* Fonts.swift */; };
 		500A89C0237BAD5700A7A7FA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A89BF237BAD5700A7A7FA /* Colors.swift */; };
 		503E3444237F1B5C009939F4 /* Trimmed.mov in Resources */ = {isa = PBXBuildFile; fileRef = 503E3443237F1B5C009939F4 /* Trimmed.mov */; };
+		506F017D23857E50002B2553 /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F017C23857E50002B2553 /* HomeScreenButton.swift */; };
 		5079258E237A2260002B0918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079258D237A2260002B0918 /* AppDelegate.swift */; };
 		50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50792591237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld */; };
 		50792595237A2262002B0918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50792594237A2262002B0918 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		500A89BD237BACE400A7A7FA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		500A89BF237BAD5700A7A7FA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		503E3443237F1B5C009939F4 /* Trimmed.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Trimmed.mov; sourceTree = "<group>"; };
+		506F017C23857E50002B2553 /* HomeScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		5079258A237A2260002B0918 /* EcosystemFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcosystemFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079258D237A2260002B0918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50792592237A2260002B0918 /* EcosystemFrontEnd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcosystemFrontEnd.xcdatamodel; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3058E7AA237A25E000C10501 /* HomeScreenViewController.swift */,
+				506F017C23857E50002B2553 /* HomeScreenButton.swift */,
 				503E3443237F1B5C009939F4 /* Trimmed.mov */,
 				3058E7AB237A25E000C10501 /* HomeScreen.xib */,
 			);
@@ -348,6 +351,7 @@
 			files = (
 				50792593237A2260002B0918 /* EcosystemFrontEnd.xcdatamodeld in Sources */,
 				500A89C0237BAD5700A7A7FA /* Colors.swift in Sources */,
+				506F017D23857E50002B2553 /* HomeScreenButton.swift in Sources */,
 				500A89BE237BACE400A7A7FA /* Fonts.swift in Sources */,
 				5079258E237A2260002B0918 /* AppDelegate.swift in Sources */,
 				3058E7AC237A25E000C10501 /* HomeScreenViewController.swift in Sources */,

@@ -19,12 +19,3 @@ extension NSView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }
-
-extension NSImage {
-  public class func gif(asset: String) -> NSImage? {
-    if let asset = NSDataAsset(name: asset) {
-		return NSImage.gif(asset: "\(asset.data)")
-    }
-    return nil
-  }
-}
