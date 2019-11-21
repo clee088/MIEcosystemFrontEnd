@@ -25,7 +25,9 @@ class HomeScreenButton: NSButton {
 	
 	private func configureButton() {
 		
-//		self.cell = HomeScreenButtonCell()
+		self.cell = HomeScreenButtonCell()
+		self.cell?.controlView?.layer?.masksToBounds = false
+		self.cell?.controlView?.layer?.cornerRadius = 25
 		self.state = .off
 		self.isBordered = false
 		self.wantsLayer = true
@@ -40,23 +42,17 @@ class HomeScreenButton: NSButton {
 
 class HomeScreenButtonCell: NSButtonCell {
 	
-//	override func draw(withFrame cellFrame: NSRect, in controlView: NSView) {
-//		super.draw(withFrame: cellFrame, in: HomeScreenViewController().view)
-//
-////		self.bezelStyle = .smallSquare
-//
-//	}
-	
 	override func highlight(_ flag: Bool, withFrame cellFrame: NSRect, in controlView: NSView) {
-		
+
 		if self.isHighlighted == false {
-			self.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75)
+			controlView.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.90).cgColor
 			self.isHighlighted = true
 		}
 		else {
-			self.backgroundColor = .clear
+			controlView.layer?.backgroundColor = Colors.buttonBackgroundColor.withAlphaComponent(0.75).cgColor
 			self.isHighlighted = false
 		}
+
 	}
 	
 }

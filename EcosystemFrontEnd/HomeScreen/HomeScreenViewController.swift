@@ -97,6 +97,17 @@ class HomeScreenViewController: NSViewController {
 	
 	//MARK: - Inits
 	
+    convenience init() {
+        self.init(nibName: "HomeScreen", bundle: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+		
+		configureUI()
+
+    }
+	
 	override func mouseEntered(with event: NSEvent) {
 		
 		if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
@@ -117,7 +128,6 @@ class HomeScreenViewController: NSViewController {
 				print("Unknown")
 			}
 		}
-		
 	}
 
 	override func mouseExited(with event: NSEvent) {
@@ -142,16 +152,9 @@ class HomeScreenViewController: NSViewController {
 		}
 	}
 	
-    convenience init() {
-        self.init(nibName: "HomeScreen", bundle: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		
-		configureUI()
-
-    }
+	override func mouseDown(with event: NSEvent) {
+		print("DOwn")
+	}
 	
 	//MARK: - Constraints
 	
@@ -218,7 +221,6 @@ class HomeScreenViewController: NSViewController {
 	//MARK: - Functions
 	
 	@objc private func buttonClicked(button: NSButton) {
-		print("Starting... \(button.title)")
 		
 		if button.title == "Start" {
 			print("Start")
